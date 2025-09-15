@@ -2,15 +2,17 @@ import Boton from "./Boton";
 
 const Tarjeta = (props) => {
 
+  const {image, title, description, bgColor} = props.destino
+
   return (
     <>
       <div className="card">
-        <img src={props.destino.image} alt="" />
+        <img src={image} alt="" />
         <div className="description">
-          <h3>{props.destino.title}</h3>
-          <p>{props.destino.description}</p>
+          <h3>{title}</h3>
+          <p>{description}</p>
         </div>
-        <Boton bgColor={props.destino.bgColor} />
+        <Boton bgColor={bgColor} />
       </div>
 
       <style jsx>{`
