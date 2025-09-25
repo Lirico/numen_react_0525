@@ -5,8 +5,7 @@ import CartItem from "./CartItem";
 
 
 const ShoppingCart = () => {
-  const { state, addToCart, deleteFromCart, clearCart } =
-    useContext(ShoppingCartContext);
+  const { state, addToCart, deleteFromCart, clearCart } = useContext(ShoppingCartContext);
 
   const { products, cart } = state;
 

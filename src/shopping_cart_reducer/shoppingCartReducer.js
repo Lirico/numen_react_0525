@@ -3,6 +3,15 @@ import { shoppingInitialState } from "./shoppingCartInitialState";
 
 export function shoppingReducer(state, action) {
   switch (action.type) {
+    case TYPES.READ_STATE: {
+      const {products, cart} = action.payload;
+
+      return {
+        ...state,
+        products,
+        cart
+      }
+    }
     case TYPES.ADD_TO_CART: {
       let newItem = state.products.find(
         (producto) => producto.id === action.payload

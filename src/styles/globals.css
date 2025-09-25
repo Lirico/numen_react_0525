@@ -1,35 +1,53 @@
-
 * {
-    margin: 0;
+  margin: 0;
 }
 
 .dark {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
-
 
 /********** SHOPPING CART **************/
 .box {
-    padding: 1rem;
-    margin: 1rem;
-    background-color: aqua;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: aqua;
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.product {
+  padding: 1rem;
+  background-color: blueviolet;
+  color: white;
+}
+
+.cart-item {
+  background-color: crimson;
+  padding: 1rem;
+  color: white;
+}
+
+/********** LOADER **************/
+.lol-spinner {
+  border: 4px solid rgba(50, 60, 70, 0.5); /* Darker, semi-transparent base */
+  border-left-color: #c8aa6e; /* Gold-like color for the active part */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: lol-spin 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite; /* Custom timing function */
+  box-shadow: 0 0 10px rgba(200, 170, 110, 0.5); /* Glowing effect */
+}
+
+@keyframes lol-spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .grid-responsive {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .product {
-    padding: 1rem;
-    background-color: blueviolet;
-    color: white;
-  }
-  
-  .cart-item {
-    background-color: crimson;
-    padding: 1rem;
-    color: white;
-  }
+}
